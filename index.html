@@ -33,15 +33,57 @@ Enregistrer (commit) des fichier (les fichiers add)
 
 <div class="cmd">git commit</div>
 <div class="warning">  Un commit nécessite toujours un message</div>
+
 Commit avec un message :
 <div class="cmd">git commit -m "message"</div>
+
 Commit avec add + message:
 <div class="cmd">git commit -a -m "message"</div>
 <h2>Corection des fichiers</h2>
+
 Voir les differents commit:
 <div class="cmd">git log</div>
+
 Corriger les modifications sur un fichiers ( pas encore add):
 <div class="cmd">git checkout 'fichiers'</div>
+
+Suprime un add:
+<div class="cmd">git reset 'fichier'</div>
+<div class="cmd">git reset .</div>
+
+Supprimer le dernier commit: 
+<div class="cmd">git reset HEAD^</div>
+
+Supprimer les deux derniers commit:
+<div class="cmd">git reset HEAD^^</div>
+
+
+<h2>La notion de branche</h2>
+
+<p>Une branche est une copie du projet, elle permet de developper en parralèlle de nouvelles fonctionnalités.
+Lorsqu'on considere les nouveautés opérationnelles, on peut les rappatrier sur la version principale (master)</p>
+
+Voir les branches:
+<div class="cmd">git branch</div>
+
+Creer une branche:
+<div class="cmd">git branch 'nom'</div>
+
+Se placer sur une branche:
+<div class="cmd">git checkout 'nom'</div>
+
+Voir les différences entre deux branches:
+<div class="cmd">git diff 'nom' ..master</div>
+
+Apporter les modif effectués sur une branche dans master
+<div class="cmd">git checkout master</div>
+<div class="cmd">git merge 'nom'</div>
+
+Remplacer master par uen branche:
+<div class="cmd">git checkout master</div>
+<div class="cmd">git fetch 'nom'</div>
+<div class="warning">=git fetch va littéralement remplacer master par la branche. Il s'agit donc d'une grosse modification dans le projet (ex: version2)</div>
+
 
 
 
